@@ -1,4 +1,3 @@
-import React from "react";
 import InventoryCell from "../components/InventoryCell";
 import { getItem } from "../helpers/itemHelper";
 import { ItemNames } from "../types";
