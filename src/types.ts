@@ -4,7 +4,7 @@ export enum DamageType { Fire = 'Fire Damage', Ice = 'Ice Damage', Lightning = '
 export enum ResistanceType { Fire = 'Fire Resistance', Ice = 'Ice Resistance', Lightning = 'Lightning Resistance', Poison = 'Poison Resistance' };
 export enum AdditionalEffectType { ManaBurn = 'ManaBurn' };
 export enum EnemyTypes { Magical = 'Magical' };
-export enum ItemModifierTypes { Bonus = 'Bonus', Damage = 'Damage', Resistance = 'Resistance' };
+export enum ItemRarityType { Rare = 'Rare', Epic = 'Epic', Unique = 'Unique' };
 
 // +7 Strength
 interface StatBonus {
@@ -44,6 +44,7 @@ interface ItemBonus {
 interface Item {
     name: ItemNames;
     upgrade?: number;
+    rarity: ItemRarityType;
     class: ClassType;
     attackPower?: number; // Single item's attack power
     attackPowers?: number[]; // Array of attack powers for each upgrade

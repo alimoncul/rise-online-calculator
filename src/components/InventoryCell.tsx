@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Item from "../types";
+import Item, { ItemRarityType } from "../types";
 
 interface InventoryCellProps {
   item?: Item;
@@ -7,7 +7,7 @@ interface InventoryCellProps {
 
 const InventoryCell: React.FC<InventoryCellProps> = (props: InventoryCellProps) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const rarityColor = props.item && props.item.rarity === ItemRarityType.Unique ? 'text-yellow-400' : props.item && props.item.rarity === ItemRarityType.Epic ? 'text-purple-400' : 'text-blue-400';
   return (
     <div
       className="bg-gray-700 h-16 w-16 border border-gray-600 rounded-md flex items-center justify-center relative"
@@ -28,7 +28,7 @@ const InventoryCell: React.FC<InventoryCellProps> = (props: InventoryCellProps) 
             alt={props.item.name}
             className="h-12 w-12 object-cover rounded-md mx-auto"
           />
-          <p className="mt-2 font-bold">{props.item.name} +{props.item.upgrade}</p>
+          <p className={`mt-2 font-bold ${rarityColor}`}>{props.item.name} +{props.item.upgrade}</p>
           <hr className="my-2 border-gray-600" />
           {props.item.attackPower && (
             <p className="flex justify-between">

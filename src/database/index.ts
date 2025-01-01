@@ -1,4 +1,4 @@
-import Item, { ClassType, DamageType, ItemNames, ResistanceType, StatType } from "../types";
+import Item, { ClassType, DamageType, ItemNames, ItemRarityType, ResistanceType, StatType } from "../types";
 
 export const ITEMS: Item[] = [
     {
@@ -16,6 +16,7 @@ export const ITEMS: Item[] = [
             }
         ],
         gearScores: [0, 0, 0, 0, 0, 0, 1045, 1205, 1385, 1600],
+        rarity: ItemRarityType.Epic
     },
     {
         name: ItemNames.RangersRing,
@@ -48,5 +49,6 @@ export const ITEMS: Item[] = [
             },
         ],
         gearScores: [115, 160, 195, 235, 295, 360],
+        rarity: ItemRarityType.Epic
     },
 ];
