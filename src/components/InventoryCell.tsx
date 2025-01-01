@@ -16,7 +16,7 @@ const InventoryCell: React.FC<InventoryCellProps> = (props: InventoryCellProps) 
     >
       {props.item && (
         <img
-          src={`/assets/${props.item.name.toLowerCase()}.png`}
+          src={`rise-online-calculator/assets/${props.item.name.toLowerCase()}.png`}
           alt={props.item.name}
           className="h-full w-full object-cover rounded-md"
         />
@@ -24,7 +24,7 @@ const InventoryCell: React.FC<InventoryCellProps> = (props: InventoryCellProps) 
       {props.item && isHovered && (
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-lg shadow-lg w-72 z-50 text-center">
           <img
-            src={`/assets/${props.item.name.toLowerCase()}.png`}
+            src={`rise-online-calculator/assets/${props.item.name.toLowerCase()}.png`}
             alt={props.item.name}
             className="h-12 w-12 object-cover rounded-md mx-auto"
           />
