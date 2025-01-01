@@ -9,14 +9,14 @@ function App() {
         <header className="bg-gray-800 text-white p-4">
           <nav className="flex justify-between">
             <div className="flex space-x-4">
-              <Link to="/" className="hover:underline">Gear Score Calculator</Link>
+              <Link to="/gear-calculator" className="hover:underline">Gear Score Calculator</Link>
               <Link to="/upgrade-simulation" className="hover:underline">Upgrade Simulation</Link>
             </div>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<GearScoreCalculator />} />
+            <Route path="/gear-calculator" element={<GearScoreCalculator />} />
             <Route path="/upgrade-simulation" element={<UpgradeSimulation />} />
           </Routes>
         </main>
