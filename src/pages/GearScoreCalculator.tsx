@@ -1,22 +1,63 @@
-import InventoryCell from "../components/InventoryCell";
-import { getItem } from "../helpers/itemHelper";
-import { ItemNames } from "../types";
+import React from 'react';
 
-const GearScoreCalculator = () => {
+import InventoryCell from '../components/InventoryCell';
+import PlaceholderInventoryCell from '../components/PlaceholderInventoryCell';
+
+import { FieldIds } from '../types';
+
+const GearScoreCalculator: React.FC = () => {
+
   return (
-    <div className="text-white p-4 rounded-lg w-[400px] mx-auto">
-      {/* Equipment Section */}
-      <div className="grid grid-cols-4 gap-2 mb-4">
-        {/* Armor Slots */}
-        <InventoryCell item={getItem(ItemNames.Vixen, 7)} />
-        <InventoryCell item={getItem(ItemNames.RangersRing, 2)} />
-        <InventoryCell />
+    <div className="flex space-x-4 p-4 text-white">
+      {/* Left Column: Item Search */}
+      <div className="w-1/2">
+        <div className="flex flex-col items-center p-4">
+          <h3 className="text-lg font-bold mb-4">Search Items</h3>
+          {/* Add your item search and upgrade selection UI here */}
+        </div>
       </div>
 
-      {/* Gear Score */}
-      <div className="text-center mb-4">
-        <h3 className="text-lg">Gear Score</h3>
-        <p className="text-yellow-400 text-2xl font-bold">2,084</p>
+      {/* Middle Column: Character Attributes */}
+      <div className="w-1/2">
+        <div className="flex flex-col items-center p-4">
+          <h3 className="text-lg font-bold mb-4">Character Attributes</h3>
+          {/* Add your character attributes UI here */}
+        </div>
+      </div>
+
+      {/* Right Column: Inventory */}
+      <div className="w-1/2">
+        <div className="flex flex-col items-center p-4 gap-2">
+          <h3 className="text-lg font-bold mb-4">Inventory</h3>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="flex flex-col items-center space-y-2">
+              <InventoryCell fieldId={FieldIds.Helmet} />
+              <InventoryCell fieldId={FieldIds.Chestplate} />
+              <InventoryCell fieldId={FieldIds.Gloves} />
+              <InventoryCell fieldId={FieldIds.Leggings} />
+              <InventoryCell fieldId={FieldIds.Boots} />
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <InventoryCell fieldId={FieldIds.Earring1} />
+              <InventoryCell fieldId={FieldIds.Relic} />
+              <PlaceholderInventoryCell></PlaceholderInventoryCell>
+              <InventoryCell fieldId={FieldIds.Ring1} />
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+
+              <InventoryCell fieldId={FieldIds.Earring2} />
+              <InventoryCell fieldId={FieldIds.Amulet} />
+              <InventoryCell fieldId={FieldIds.Belt} />
+              <InventoryCell fieldId={FieldIds.Ring2} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <InventoryCell fieldId={FieldIds.RightHand} />
+            <InventoryCell fieldId={FieldIds.LeftHand} />
+          </div>
+        </div>
       </div>
     </div>
   );

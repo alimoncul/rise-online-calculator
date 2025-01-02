@@ -62,4 +62,6 @@ export enum ItemNames {
     RangersRing = "Ranger's Ring"
 }
 
+export enum FieldIds { Helmet = "Helmet", Chestplate = "Chestplate", Gloves = "Gloves", Leggings = "Leggings", Boots = "Boots", Ring1 = "Ring 1", Ring2 = "Ring 2", Amulet = "Amulet", Belt = "Belt", Earring1 = "Earring 1", Earring2 = "Earring 2", LeftHand = "Left Hand", RightHand = "Right Hand", Relic = "Relic" }
+
 export default Item;

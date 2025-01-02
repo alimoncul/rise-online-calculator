@@ -4,19 +4,22 @@ import { Images } from "../assets";
 
 interface InventoryCellProps {
   item?: Item;
+  fieldId?: string;
 }
 
 const InventoryCell: React.FC<InventoryCellProps> = (props: InventoryCellProps) => {
+  const [fieldId] = useState<string | undefined>(props.fieldId);
   const [isHovered, setIsHovered] = useState(false);
   const rarityColor = props.item && props.item.rarity === ItemRarityType.Unique ? 'text-yellow-400' : props.item && props.item.rarity === ItemRarityType.Epic ? 'text-purple-400' : 'text-blue-400';
   const image = props.item?.name ? Images[props.item.name.toLowerCase().replace(/[' ]/g, '') as keyof typeof Images] : '';
 
   return (
     <div
-      className="bg-gray-700 h-16 w-16 border border-gray-600 rounded-md flex items-center justify-center relative"
+      className="bg-gray-700 h-20 w-20 border border-gray-600 rounded-md flex items-center justify-center relative hover:bg-gray-800"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {!props.item && (<span className="text-xs">{fieldId ?? ''}</span>)}
       {props.item && (
         <img
           src={image}
