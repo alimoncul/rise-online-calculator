@@ -5,12 +5,12 @@ import SkillStatCalculator from './pages/SkillStatCalculator.tsx'
 
 function App() {
   return (
-    <Router>
+    <Router basename='/rise-online-calculator'>
       <div>
         <header className="bg-gray-800 text-white p-4">
           <nav className="flex justify-between">
             <div className="flex space-x-4">
-              <Link to="/rise-online-calculator" className="hover:underline">Gear Score Calculator</Link>
+              <Link to="/" className="hover:underline">Gear Score Calculator</Link>
               <Link to="/upgrade-simulation" className="hover:underline">Upgrade Simulation</Link>
               <Link to="/skill-stat-calculator" className="hover:underline">Skill/Stat Calculator</Link>
             </div>
@@ -18,7 +18,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/rise-online-calculator" element={<GearCalculator />} />
+            <Route path="/" element={<GearCalculator />} />
             <Route path="/upgrade-simulation" element={<UpgradeSimulation />} />
             <Route path="/skill-stat-calculator" element={<SkillStatCalculator />} />
           </Routes>
