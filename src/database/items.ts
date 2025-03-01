@@ -1,4 +1,4 @@
-import Item, { ClassType, DamageType, ItemNames, ItemRarityType, ResistanceType, StatType } from "../types";
+import { Item, ClassType, DamageType, ItemNames, ItemRarityType, ResistanceType, StatType } from "../types";
 
 export const ITEMS: Item[] = [
     {

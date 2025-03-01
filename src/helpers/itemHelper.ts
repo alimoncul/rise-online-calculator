@@ -1,5 +1,5 @@
-import { ITEMS } from "../database";
-import Item, { ItemNames } from "../types";
+import { ITEMS } from "../database/items";
+import { Item, ItemNames } from "../types";
 
 export function getItem(name: ItemNames, upgrade: number): Item {
     const item = ITEMS.find((item) => item.name === name);
