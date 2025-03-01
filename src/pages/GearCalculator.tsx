@@ -5,7 +5,7 @@ import PlaceholderInventoryCell from '../components/PlaceholderInventoryCell';
 
 import { FieldIds } from '../types';
 
-const GearScoreCalculator: React.FC = () => {
+const GearCalculator: React.FC = () => {
 
   return (
     <div className="flex space-x-4 p-4 text-white">
@@ -63,4 +63,4 @@ const GearScoreCalculator: React.FC = () => {
   );
 };
 
-export default GearScoreCalculator;
+export default GearCalculator;

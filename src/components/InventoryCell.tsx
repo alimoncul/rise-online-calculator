@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Item, { ItemRarityType } from "../types";
+import { Item, ItemRarityType } from "../types";
 import { Images } from "../assets";
 
 interface InventoryCellProps {

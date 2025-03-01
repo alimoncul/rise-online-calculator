@@ -41,7 +41,7 @@ interface ItemBonus {
     values?: number[]; // Array of values for each upgrade
 }
 
-interface Item {
+export interface Item {
     name: ItemNames;
     upgrade?: number;
     rarity: ItemRarityType;
@@ -57,11 +57,17 @@ interface Item {
     defenses?: number[];
 }
 
+export interface CharacterStat {
+    Strength: number,
+    Health: number,
+    Dexterity: number,
+    Magic: number,
+    Intelligence: number
+}
+
 export enum ItemNames {
     Vixen = "Vixen",
     RangersRing = "Ranger's Ring"
 }
 
 export enum FieldIds { Helmet = "Helmet", Chestplate = "Chestplate", Gloves = "Gloves", Leggings = "Leggings", Boots = "Boots", Ring1 = "Ring 1", Ring2 = "Ring 2", Amulet = "Amulet", Belt = "Belt", Earring1 = "Earring 1", Earring2 = "Earring 2", LeftHand = "Left Hand", RightHand = "Right Hand", Relic = "Relic" }
-
-export default Item;
